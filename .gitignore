@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (raw downloads - track structure, not content)
+data/**/*.pdf
+data/**/*.png
+data/**/*.jpg
+data/**/*.html
+
+# Output
+research_outputs/*.csv
+research_outputs/*.xlsx
