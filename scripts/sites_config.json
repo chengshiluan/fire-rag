@@ -1,0 +1,136 @@
+{
+  "description": "地方性消防法规采集站点配置文件 - 可添加新的采集站点规则",
+  "version": "1.0",
+  "last_updated": "2026-06-12",
+  "sites": [
+    {
+      "site_id": "beijing_dfxfg",
+      "source_name": "北京市人民政府-首都之窗-地方性法规",
+      "regulation_type": "地方性法规",
+      "enabled": true,
+      "list_template": {
+        "name": "beijing_list",
+        "base_url": "https://www.beijing.gov.cn",
+        "list_url_template": "https://www.beijing.gov.cn/zhengce/dfxfg/",
+        "item_selector": ".news-list li, .list-box li, .listContent li",
+        "title_selector": "a",
+        "link_selector": "a",
+        "date_selector": "span.date, .time",
+        "page_start": 1,
+        "page_end": -1,
+        "encoding": "utf-8"
+      },
+      "detail_template": {
+        "name": "beijing_detail",
+        "content_selector": ".article-content, .main-content, #mainText, .text-content",
+        "title_selector": "h1, .article-title",
+        "publish_date_selector": ".article-date, .info-date, .time",
+        "exclude_selectors": [".print-btn", ".share", ".related-links"],
+        "encoding": "utf-8"
+      }
+    },
+    {
+      "site_id": "shanghai_fire_xzgfx",
+      "source_name": "上海市行政规范性文件数据库",
+      "regulation_type": "规范性文件",
+      "enabled": true,
+      "list_template": {
+        "name": "shanghai_list",
+        "base_url": "http://service.shanghai.gov.cn",
+        "list_url_template": "http://service.shanghai.gov.cn/xingzhengwendangkujyh/XZGFList.aspx?departid1=CITY_81",
+        "item_selector": "table tr:has(td)",
+        "title_selector": "td:first-child a, td:nth-child(1) a",
+        "link_selector": "td:first-child a, td:nth-child(1) a",
+        "date_selector": "td:nth-child(3)",
+        "page_start": 1,
+        "page_end": 1,
+        "encoding": "utf-8"
+      },
+      "detail_template": {
+        "name": "shanghai_detail",
+        "content_selector": ".content, #content, .main-content, .article-content",
+        "title_selector": "h1, .title",
+        "publish_date_selector": ".date, .time, .info-date",
+        "document_number_selector": ".document-number, .wenhao",
+        "encoding": "utf-8"
+      }
+    },
+    {
+      "site_id": "guangdong_zcfgk",
+      "source_name": "广东省人民政府-政策法规库",
+      "regulation_type": "地方性法规",
+      "enabled": true,
+      "list_template": {
+        "name": "guangdong_list",
+        "base_url": "https://www.gd.gov.cn",
+        "list_url_template": "https://www.gd.gov.cn/zwgk/wjk/zcfgk/index_{page}.html",
+        "item_selector": ".list-item, .news-list li, .viewList li, .data-list li",
+        "title_selector": "a",
+        "link_selector": "a",
+        "date_selector": "span.date, .time",
+        "page_start": 1,
+        "page_end": -1,
+        "encoding": "utf-8"
+      },
+      "detail_template": {
+        "name": "guangdong_detail",
+        "content_selector": "#content, .article-content, .main-content, .text-content",
+        "title_selector": "h1, .article-title",
+        "publish_date_selector": ".article-date, .info-date, .time",
+        "issuing_authority_selector": ".authority, .source",
+        "encoding": "utf-8"
+      }
+    },
+    {
+      "site_id": "guangdong_119",
+      "source_name": "广东省消防救援总队",
+      "regulation_type": "地方性法规",
+      "enabled": true,
+      "list_template": {
+        "name": "gd119_list",
+        "base_url": "https://gd.119.gov.cn",
+        "list_url_template": "https://gd.119.gov.cn/zwgk/flfg/",
+        "item_selector": ".news-list li, .list-box li, .list-content li, .list-item",
+        "title_selector": "a",
+        "link_selector": "a",
+        "date_selector": "span.date, .time",
+        "page_start": 1,
+        "page_end": -1,
+        "encoding": "utf-8"
+      },
+      "detail_template": {
+        "name": "gd119_detail",
+        "content_selector": ".article-content, .content, .main-text",
+        "title_selector": "h1, .article-title, .title",
+        "publish_date_selector": ".date, .time, .info-date",
+        "issuing_authority_selector": ".authority, .source",
+        "encoding": "utf-8"
+      }
+    },
+    {
+      "site_id": "jiangsu_119",
+      "source_name": "江苏省消防救援总队",
+      "regulation_type": "地方性法规",
+      "enabled": true,
+      "list_template": {
+        "name": "jiangsu_119_list",
+        "base_url": "https://js.119.gov.cn",
+        "list_url_template": "https://js.119.gov.cn/zwgk/flfg/",
+        "item_selector": ".news-list li, .list-box li, .list-item",
+        "title_selector": "a",
+        "link_selector": "a",
+        "date_selector": "span.date, .time",
+        "page_start": 1,
+        "page_end": -1,
+        "encoding": "utf-8"
+      },
+      "detail_template": {
+        "name": "jiangsu_119_detail",
+        "content_selector": ".article-content, .content, .main-text",
+        "title_selector": "h1, .article-title",
+        "publish_date_selector": ".date, .time",
+        "encoding": "utf-8"
+      }
+    }
+  ]
+}

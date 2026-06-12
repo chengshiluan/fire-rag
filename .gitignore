@@ -27,3 +27,6 @@ data/**/*.html
 # Output
 research_outputs/*.csv
 research_outputs/*.xlsx
+
+# Logs
+logs/

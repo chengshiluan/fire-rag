@@ -1,0 +1,11 @@
+# 国家法律法规数据库爬虫依赖
+# 安装: pip install -r requirements.txt
+
+requests>=2.28.0
+beautifulsoup4>=4.12.0
+python-docx>=1.0.0
+lxml>=4.9.0
+
+# 可选：Selenium 浏览器自动化（用于绕过 WAF）
+# selenium>=4.15.0
+# webdriver-manager>=4.0.0
